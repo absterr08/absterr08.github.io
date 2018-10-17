@@ -9,13 +9,11 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./portfolio_styles.css">
     <link rel="shortcut icon" href="./favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="./dist/main.js"></script>
-    <script type="text/javascript" src="./elementsView.js"> </script>
 
     <title>Abby Hersh</title>
   </head>
@@ -25,7 +23,7 @@
         <nav class='nav'>
           <ul class='right-nav'>
             <li class='button'>
-              <a href="#about">about me</a>
+              <a href="#about" id='about-me-button'>about me</a>
             </li>
             <li id='resume-button' class='button'>
               resume
@@ -51,7 +49,7 @@
       <nav class='nav'>
         <ul class='lower-nav'>
           <li id='nav-dropdown-button' class='button'>
-            dropdown
+            navigate
           </li>
           <li id='resume-button-2' class='button'>
             resume
@@ -91,7 +89,7 @@
           <h2>Stuff I Know</h2>
 
           I'm currently a Senior Instructor at App Academy, where we teach Ruby, SQL, Rails, Javascript, React, and Redux. So I'm pretty good at those things.
-          I also know a bit of Vue (which I learned and used to make this website!)
+
             <div class="skills-container">
               <i class="devicon-ruby-plain-wordmark colored"></i>
               <i class="devicon-react-original colored"></i>
@@ -111,7 +109,7 @@
           <h2>Projects</h2>
           <div class="project-div" data-correspondent='slap'>
             <figure id="one">
-              <figcaption id="img1" class="overlay">Slap</figcaption><img src="./img/slap.png" alt=""></a>
+              <figcaption id="img1" class="overlay"><h3>Slap</h3></figcaption><img src="./img/slap.png" alt=""></a>
             </figure>
           </div>
         </section>
@@ -139,7 +137,7 @@
 
       </div> -->
 
-      <div id='slap' class="modal-background project-modal-background hidden">
+      <div id='slap' class="modal-background project-modal-background">
         <div class="project-modal">
           <h1>Slap</h1>
           <div class="button close-modal-button" data-correspondent='slap'>
@@ -168,7 +166,7 @@
       </div>
 
       <div id="resume-container" class="modal-background hidden">
-        <embed id="resume" type="application/pdf" src="./abigail_hersh_resume.pdf#zoom=100">
+        <embed id="resume" type="application/pdf" src="./img/abigail_hersh_resume.pdf#zoom=100">
       </div>
     </main>
   </body>

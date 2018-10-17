@@ -87,6 +87,7 @@ header > .overlay {
 a {
   text-decoration: none;
   color: white;
+	cursor: pointer;
 }
 
 a:hover {
@@ -105,10 +106,10 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 25px;
   color: #a6808c;
   text-align: center;
-
+	padding: 10px;
 }
 
 .nav {
@@ -139,7 +140,7 @@ h3 {
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 182px;
+  right: 175px;
   top: 50px;
   background: #d6cfcb;
   padding: 5px;
@@ -190,7 +191,7 @@ ul {
 }
 
 .main-content > section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .first {
@@ -255,6 +256,10 @@ ul {
 img {
   height: 300px;
   width: 300px;
+}
+
+.project-div figure {
+	cursor: pointer;
 }
 
 #redux-icon {
@@ -345,4 +350,8 @@ img {
 .lower-nav {
 	display: none;
 	/* opacity: 0; */
+}
+
+#slap {
+	display: none;
 }

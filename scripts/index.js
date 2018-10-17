@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('about-me-button').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+  });
+
   const navDropdown = document.getElementById('nav-dropdown');
   const dropdownButton = document.getElementById('nav-dropdown-button');
   const closeModalButtons = document.getElementsByClassName('close-modal-button');
@@ -71,18 +76,18 @@ function addDropdownFunctionality(dropdownButton, navDropdown) {
 }
 
 function bindCloseModalButton(button) {
-  const correspondent = document.getElementById(button.dataset.correspondent);
+  const $correspondent = $(document.getElementById(button.dataset.correspondent));
   button.addEventListener('click', () => {
-    correspondent.classList.add('hidden');
+    $correspondent.fadeOut();
     document.getElementsByTagName('body')[0].classList.remove('noscroll');
 
   });
 }
 
 function bindOpenProjectModals(project) {
-  const correspondent = document.getElementById(project.dataset.correspondent);
+  const $correspondent = $(document.getElementById(project.dataset.correspondent));
   project.addEventListener('click', () => {
-    correspondent.classList.remove('hidden');
+    $correspondent.fadeIn();
     document.getElementsByTagName('body')[0].classList.add('noscroll');
 
   });
