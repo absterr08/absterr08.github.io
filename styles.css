@@ -1,0 +1,348 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  font-family: 'Abel', sans-sans-serif;
+  /* font-family: sans-serif; */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/* line-height: 1; */
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main {
+  height: 100%;
+  width: auto;
+  background: white;
+}
+
+header {
+  background-image: url(./img/howdy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header > .overlay {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  height: 20px;
+  background: #ccb7ae;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid white;
+  transition: background .5s;
+  color: white;
+  text-align: center;
+}
+
+.button:hover {
+  background: #a6808c;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 80px;
+  color: #a6808c;
+}
+
+h2 {
+  font-size: 40px;
+  color: #a6808c;
+	margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #a6808c;
+  text-align: center;
+
+}
+
+.nav {
+  display: flex;
+	position: sticky;
+  top: 0px;
+  min-height: 50px;
+  width: 100%;
+	/* background: rgba(255, 255, 255, 0.5); */
+	background: linear-gradient(to bottom,
+                    rgba(255,255,255, 1),
+                    rgba(255,255,255, 0) 100%);
+
+  /* border-bottom: .5px solid white; */
+  /* background: #d6cfcb; */
+  /* box-shadow: 0 20px 55px rgba(0,0,0,0.35); */
+}
+
+/* .nav2 {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  min-height: 50px;
+  width: 100%;
+} */
+
+.nav-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 182px;
+  top: 50px;
+  background: #d6cfcb;
+  padding: 5px;
+}
+
+.nav > h2 {
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+}
+
+ul {
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+  position: absolute;
+  right: 20px;
+}
+
+.lower-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.lower-overlay > .button {
+  width: 130px;
+}
+
+.lower-overlay > h2, .lower-overlay > h1 {
+  color: white;
+  /* -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: .2px; */
+}
+
+.main-content {
+	height: 100%;
+  width: 80%;
+  margin: auto;
+	background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-content > section {
+  height: 100vh;
+}
+
+.first {
+	display: flex;
+  flex-direction: column;
+}
+
+.me-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+
+  /* background: #706677; */
+	/* border: 1px solid white; */
+	/* box-shadow: 0 20px 55px rgba(0,0,0,0.35); */
+}
+
+.me-pic {
+  border-radius: 50%;
+  /* width: 50%; */
+  height: 250px;
+  width: 200px;
+  margin-bottom: 20px;
+  /* margin-top: 2em; */
+
+  /* width: 200px;
+  height: auto; */
+
+
+  /* border: 1px solid white; */
+  /* box-shadow: 0 20px 55px rgba(0,0,0,0.35); */
+}
+
+.me-container > a {
+  padding-top: 5px;
+}
+
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: auto; */
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.skills-container i {
+  zoom: 5;
+  padding: 10px;
+}
+
+.project-div {
+  padding: 50px;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+}
+
+#redux-icon {
+  zoom: 8;
+  width: 16px;
+  height: 13px;
+  padding: 3px;
+  padding-top: 4px;
+}
+
+#circle-icon {
+  zoom: 8;
+  width: 16px;
+  height: 16px;
+  padding: 3px;
+}
+
+.modal-background {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  overflow-y: scroll;
+}
+
+.project-modal-background {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.close-modal-button {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  text-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.project-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-modal > * {
+  padding: 10px;
+  display: flex;
+}
+
+.modal-img {
+  /* border: 1px solid black; */
+  box-shadow: 0 20px 55px rgba(0,0,0,0.35);
+
+}
+
+/* .project-buttons {
+  display: flex;
+/* } */
+.project-modal-content > p {
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+}
+
+#resume-container {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#resume {
+  top: 0px;
+  margin-left: 150px;
+  height: 1100px;
+  width: 1000px;
+}
+
+.hidden {
+  display: none;
+	opacity: 0;
+	transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.lower-nav {
+	display: none;
+	/* opacity: 0; */
+}
