@@ -1,8 +1,7 @@
 import { scrollEvent, testy } from './elementsView.js';
+import Compliments from './les_knope/compliments.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const cares = document.getElementById('cares');
-  // window.addEventListener('scroll', scrollEvent);
   const tricky = document.getElementById('tricky-text');
   tricky.addEventListener('mouseover', () => {
     tricky.innerText = "(not a photographer but i took this photo!)"
@@ -10,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   tricky.addEventListener('mouseleave', () => {
     tricky.innerText = "Software Engineer"
   })
+
+  bindCompliments();
 })
 
 
@@ -36,19 +37,35 @@ document.addEventListener('DOMContentLoaded', () => {
   bindNavBar(lowerNav, $lowerNav);
 });
 
+
+function bindCompButton(button) {
+  const background = document.getElementById('compliment-modal-background')
+  button.addEventListener('click', () => {
+  // background.classList.remove('hidden');
+    $(background).fadeIn();
+    document.getElementsByTagName('body')[0].classList.add('noscroll');
+  })
+background.addEventListener('click', () => {
+  $(background).fadeOut();
+    document.getElementsByTagName('body')[0].classList.remove('noscroll');
+  })
+}
+
+
+function bindCompliments() {
+  const buttons = document.getElementsByClassName('les-knope');
+  Array.from(buttons).forEach( button => bindCompButton(button));
+}
+
 function bindNavBar(lowerNav, $el) {
   document.addEventListener('scroll', () => {
     if (window.scrollY > 550) {
-      // lowerNav.classList.remove('hidden');
       $el.fadeIn();
-
     } else {
       $el.fadeOut();
     }
   });
 }
-
-
 
 function addResumeModal(button) {
   button.addEventListener('click', () => {

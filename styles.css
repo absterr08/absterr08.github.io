@@ -84,6 +84,10 @@ header > .overlay {
   cursor: pointer;
 }
 
+.button:focus {
+	outline: none;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -156,9 +160,14 @@ h3 {
   /* margin: 5px; */
 }
 
-.fab, .far{
+.fab, .far {
 	zoom: 2;
 	margin: 5px;
+	transition: color .5s;
+}
+
+.fab:hover, .far:hover {
+	color: #a6808c;
 }
 
 ul {
@@ -388,5 +397,47 @@ img {
 }
 
 #contact h3 {
+	color: white;
+}
+
+#contact .fab:hover, #contact .far:hover {
+	color: #735961;
+}
+
+
+#compliment-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+	height: 60%;
+	margin:auto;
+	background: rgb(243, 238, 238);
+	border: 5px solid white;
+}
+
+#compliment-modal-background {
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+#compliment-container input {
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+}
+
+#compliment-container .button {
+	height: 30px;
+	font-size: 15px;
+}
+
+#compliment-container p {
+	height: 50px;
+	font-size: 20px;
 	color: white;
 }

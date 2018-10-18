@@ -46,7 +46,7 @@
           <div class="lower-overlay">
               <h1>Abby Hersh</h1>
               <h2 id='tricky-text'>Software Engineer</h2>
-              <a href="#" class="button">Parks and Rec Fan?</a>
+              <div class="les-knope button">Parks and Rec Fan?</div>
           </div>
 
 
@@ -62,8 +62,8 @@
           <li id='resume-button-2' class='button'>
             resume
           </li>
-          <li class='button'>
-            <a href="les_knope/compliments.html">parks and rec fan?</a>
+          <li class='les-knope button'>
+            parks and rec fan?
           </li>
         </ul>
         <ul class="nav-dropdown hidden" id="nav-dropdown" >
@@ -82,9 +82,6 @@
         <section class="first" id="about">
           <div class='me-container'>
             <img class='me-pic' src='./img/hands.jpg'/>
-            <!-- <a href="https://www.linkedin.com/in/abigail-hersh/">linkedIn</a>
-            <a href="https://twitter.com/absterr08">twitter</a>
-            <a href="https://github.com/absterr08">github</a> -->
           </div>
           <h2>Hi!</h2>
           Thanks for stopping by at my humble domain. My name's Abby and I'm a software developer.
@@ -182,6 +179,16 @@
       <div id="resume-container" class="modal-background hidden">
         <embed id="resume" type="application/pdf" src="./img/abigail_hersh_resume.pdf#zoom=100">
       </div>
+
+      <div id="compliment-modal-background" class="modal-background">
+        <div id="compliment-container">
+          <p id='compliment'></p>
+          <input id="name" placeholder="enter your name!">
+
+          <button class='button' id='les-compliment-button'>Get a Knope compliment</button>
+        </div>
+      </div>
+
     </main>
   </body>
 </html>
