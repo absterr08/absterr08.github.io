@@ -1,5 +1,5 @@
 import { scrollEvent, testy } from './elementsView.js';
-import Compliments from './les_knope/compliments.js';
+import { bindComplimentStuff } from './les_knope/compliments.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const tricky = document.getElementById('tricky-text');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tricky.innerText = "Software Engineer";
   });
 
-  bindCompliments();
+  bindComplimentStuff();
 });
 
 
@@ -36,25 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const $lowerNav = $('.lower-nav');
   bindNavBar(lowerNav, $lowerNav);
 });
-
-
-function bindCompButton(button) {
-  const background = document.getElementById('compliment-modal-background');
-  button.addEventListener('click', () => {
-    $(background).fadeIn();
-    document.getElementsByTagName('body')[0].classList.add('noscroll');
-  });
-background.addEventListener('click', () => {
-  $(background).fadeOut();
-    document.getElementsByTagName('body')[0].classList.remove('noscroll');
-  });
-}
-
-
-function bindCompliments() {
-  const buttons = document.getElementsByClassName('les-knope');
-  Array.from(buttons).forEach( button => bindCompButton(button));
-}
 
 function bindNavBar(lowerNav, $el) {
   document.addEventListener('scroll', () => {

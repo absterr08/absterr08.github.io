@@ -19,7 +19,8 @@ class KnopeComplimentGenerator {
     this.complimentTracker = new Set();
     this.nameInput = nameInput;
     this.complimentEl = complimentEl;
-    [nameInput, button].forEach(el => {
+    const complimentContainer = document.getElementById('compliment-container');
+    [nameInput, button, complimentContainer].forEach(el => {
       el.addEventListener('click', e => e.stopPropagation());
     });
     button.addEventListener('click', this.compliment.bind(this));
@@ -46,12 +47,36 @@ class KnopeComplimentGenerator {
     return leslieCompliments[idx];
   }
 
+  clear() {
+    this.complimentEl.innerHTML = "";
+    this.nameInput.value = "";
+  }
+
 }
 
+function bindCompButton(button, background) {
+  button.addEventListener('click', () => {
+    console.log(background);
+    $(background).fadeIn();
+    document.getElementsByTagName('body')[0].classList.add('noscroll');
+  });
+}
 
-document.addEventListener('DOMContentLoaded', () => {
+const createComplimentGenerator = () => {
   const lesComplimentButton = document.getElementById('les-compliment-button');
   const nameInput = document.getElementById('name');
   const complimentEl = document.getElementById('compliment');
-  new KnopeComplimentGenerator(lesComplimentButton, nameInput, complimentEl);
-})
+  return new KnopeComplimentGenerator(lesComplimentButton, nameInput, complimentEl);
+};
+
+export const bindComplimentStuff = () => {
+  const buttons = document.getElementsByClassName('les-knope');
+  const background = document.getElementById('compliment-modal-background');
+  Array.from(buttons).forEach( (button) => bindCompButton(button, background));
+  const comp = createComplimentGenerator();
+  background.addEventListener('click', () => {
+    $(background).fadeOut();
+    document.getElementsByTagName('body')[0].classList.remove('noscroll');
+    comp.clear();
+  });
+};

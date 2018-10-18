@@ -101,12 +101,14 @@ a:hover {
 h1 {
   font-size: 80px;
   color: #a6808c;
+	cursor: default;
 }
 
 h2 {
   font-size: 40px;
   color: #a6808c;
 	margin-bottom: 10px;
+	cursor: default;
 }
 
 h3 {
