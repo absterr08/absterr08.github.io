@@ -17,15 +17,12 @@ function below(elTop, windowBottom) {
 
 function scrollIfInView(el) {
   if (inView(el)) {
-    console.log('in view');
     el.scrollIntoView({ behavior: 'smooth' });
     window.removeEventListener('scroll', scrollEvent);
-    // el.scrollIntoView();
   }
 }
 
 export const scrollEvent = (e) => {
-  // console.log('why');
   e.stopPropagation();
   scrollIfInView(cares);
 };

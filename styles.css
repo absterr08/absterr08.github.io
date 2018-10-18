@@ -114,6 +114,7 @@ h3 {
 
 .nav {
   display: flex;
+	justify-content: space-between;
 	position: sticky;
   top: 0px;
   min-height: 50px;
@@ -126,6 +127,10 @@ h3 {
   /* border-bottom: .5px solid white; */
   /* background: #d6cfcb; */
   /* box-shadow: 0 20px 55px rgba(0,0,0,0.35); */
+}
+
+.nav ul {
+	margin: 6px;
 }
 
 /* .nav2 {
@@ -148,16 +153,16 @@ h3 {
 
 .nav > h2 {
   font-weight: bold;
-  padding: 5px;
-  margin: 5px;
+  /* margin: 5px; */
+}
+
+.fab, .far{
+	zoom: 2;
+	margin: 5px;
 }
 
 ul {
   display: flex;
-  width: auto;
-  justify-content: space-around;
-  position: absolute;
-  right: 20px;
 }
 
 .lower-overlay {
@@ -192,6 +197,11 @@ ul {
 
 .main-content > section {
   min-height: 100vh;
+	font-size: 20px;
+}
+
+.main-content > section:last-of-type {
+	min-height: calc(100vh - 150px);
 }
 
 .first {
@@ -260,6 +270,13 @@ img {
 
 .project-div figure {
 	cursor: pointer;
+}
+.project-div img {
+	transition: .8s;
+}
+.project-div img:hover {
+	transition: .8s;
+	box-shadow: 0 20px 55px rgba(0,0,0,0.35);
 }
 
 #redux-icon {
@@ -354,4 +371,22 @@ img {
 
 #slap {
 	display: none;
+}
+
+
+#contact {
+	height: 150px;
+	background-color: grey;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#contact ul {
+	justify-content: center;
+}
+
+#contact h3 {
+	color: white;
 }

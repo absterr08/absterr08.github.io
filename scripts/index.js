@@ -2,8 +2,14 @@ import { scrollEvent, testy } from './elementsView.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const cares = document.getElementById('cares');
-  window.addEventListener('scroll', scrollEvent);
-  // testy();
+  // window.addEventListener('scroll', scrollEvent);
+  const tricky = document.getElementById('tricky-text');
+  tricky.addEventListener('mouseover', () => {
+    tricky.innerText = "(not a photographer but i took this photo!)"
+  })
+  tricky.addEventListener('mouseleave', () => {
+    tricky.innerText = "Software Engineer"
+  })
 })
 
 
@@ -102,7 +108,8 @@ class CoolScroll {
 
   bindEvents() {
     this.el.addEventListener('click', () => {
-      this.correspondent.scrollIntoView({ behavior: 'smooth' });
+      this.correspondent.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest" });
+      // this.correspondent.scrollTop -= 35;
     });
   }
 }
