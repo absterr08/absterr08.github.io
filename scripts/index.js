@@ -1,17 +1,17 @@
 import { scrollEvent, testy } from './elementsView.js';
-import Compliments from './les_knope/compliments.js'
+import Compliments from './les_knope/compliments.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const tricky = document.getElementById('tricky-text');
   tricky.addEventListener('mouseover', () => {
-    tricky.innerText = "(not a photographer but i took this photo!)"
-  })
+    tricky.innerText = "(not a photographer but i took this photo!)";
+  });
   tricky.addEventListener('mouseleave', () => {
-    tricky.innerText = "Software Engineer"
-  })
+    tricky.innerText = "Software Engineer";
+  });
 
   bindCompliments();
-})
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,16 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function bindCompButton(button) {
-  const background = document.getElementById('compliment-modal-background')
+  const background = document.getElementById('compliment-modal-background');
   button.addEventListener('click', () => {
-  // background.classList.remove('hidden');
     $(background).fadeIn();
     document.getElementsByTagName('body')[0].classList.add('noscroll');
-  })
+  });
 background.addEventListener('click', () => {
   $(background).fadeOut();
     document.getElementsByTagName('body')[0].classList.remove('noscroll');
-  })
+  });
 }
 
 
@@ -71,11 +70,11 @@ function addResumeModal(button) {
   button.addEventListener('click', () => {
     document.getElementById('resume-container').classList.remove('hidden');
     document.getElementsByTagName('body')[0].classList.add('noscroll');
-  })
+  });
   document.getElementById('resume-container').addEventListener('click', () => {
     document.getElementById('resume-container').classList.add('hidden');
     document.getElementsByTagName('body')[0].classList.remove('noscroll');
-  })
+  });
 }
 
 function addDropdownFunctionality(dropdownButton, navDropdown) {
@@ -85,7 +84,7 @@ function addDropdownFunctionality(dropdownButton, navDropdown) {
     e.stopPropagation();
     document.getElementsByTagName('body')[0].addEventListener('click', () => {
       navDropdown.classList.add('hidden');
-    })
+    });
   });
   // dropdownButton.addEventListener('mouseleave', () => {
   //   navDropdown.classList.add('hidden');
@@ -94,7 +93,7 @@ function addDropdownFunctionality(dropdownButton, navDropdown) {
   const dropdownLis = Array.from(navDropdown.children);
   dropdownLis.forEach( li => {
     new CoolScroll(li);
-    li.addEventListener('click', () => navDropdown.classList.add('hidden'))
+    li.addEventListener('click', () => navDropdown.classList.add('hidden'));
   });
 }
 
@@ -119,14 +118,13 @@ function bindOpenProjectModals(project) {
 class CoolScroll {
   constructor(el){
     this.el = el;
-    this.correspondent = document.getElementById(el.dataset.correspondent)
+    this.correspondent = document.getElementById(el.dataset.correspondent);
     this.bindEvents();
   }
 
   bindEvents() {
     this.el.addEventListener('click', () => {
       this.correspondent.scrollIntoView({ behavior: 'smooth', block: "start", inline: "nearest" });
-      // this.correspondent.scrollTop -= 35;
     });
   }
 }

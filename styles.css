@@ -412,17 +412,16 @@ img {
 	justify-content: center;
 	width: 60%;
 	height: 60%;
-	margin:auto;
+	margin: auto;
 	background: rgb(243, 238, 238);
 	border: 5px solid white;
 }
 
 #compliment-modal-background {
 	background: rgba(0, 0, 0, 0.7);
-	display: flex;
 	align-items: center;
-	justify-content: center;
 	display: none;
+  padding-top: 100px;
 }
 
 #compliment-container input {
@@ -439,5 +438,5 @@ img {
 #compliment-container p {
 	height: 50px;
 	font-size: 20px;
-	color: white;
+	color: #7f3a3a;
 }

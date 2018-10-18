@@ -19,6 +19,9 @@ class KnopeComplimentGenerator {
     this.complimentTracker = new Set();
     this.nameInput = nameInput;
     this.complimentEl = complimentEl;
+    [nameInput, button].forEach(el => {
+      el.addEventListener('click', e => e.stopPropagation());
+    });
     button.addEventListener('click', this.compliment.bind(this));
   }
 
