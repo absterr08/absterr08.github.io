@@ -397,6 +397,7 @@ img {
 	width: 300px;
 	height: 50px;
 	font-size: 20px;
+	padding-left: 10px;
 }
 
 #compliment-container .button {
