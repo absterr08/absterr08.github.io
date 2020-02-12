@@ -98,6 +98,11 @@ a:hover {
   text-decoration: underline;
 }
 
+#cares a {
+  color: #a6808c;
+  text-decoration: underline;
+}
+
 h1 {
   font-size: 80px;
   color: #a6808c;
