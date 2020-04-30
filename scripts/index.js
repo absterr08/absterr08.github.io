@@ -1,4 +1,3 @@
-import { scrollEvent, testy } from './elementsView.js';
 import { bindComplimentStuff } from './les_knope/compliments.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tricky.innerText = "(not a photographer but i took this photo!)";
   });
   tricky.addEventListener('mouseleave', () => {
-    tricky.innerText = "Software Engineer";
+    tricky.innerText = "Software Developer";
   });
 
   bindComplimentStuff();
@@ -19,80 +18,70 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   });
-
-  const navDropdown = document.getElementById('nav-dropdown');
+  const $navDropdown = $(document.getElementById('nav-dropdown'));
+  $navDropdown.hide();
+  const navDropdownUl = document.getElementById('nav-dropdown-ul');
   const dropdownButton = document.getElementById('nav-dropdown-button');
   const closeModalButtons = document.getElementsByClassName('close-modal-button');
   const projects = document.getElementsByClassName('project-div');
-  bindCloseModalButton(closeModalButtons[0]);
-  bindOpenProjectModals(projects[0]);
-  const b = document.getElementById('resume-button');
-  const b2 = document.getElementById('resume-button-2');
-  addResumeModal(b);
-  addResumeModal(b2);
-  addDropdownFunctionality(dropdownButton, navDropdown);
+  
+  for (let button of closeModalButtons) {
+    bindCloseModalButton(button);
+  }
+  for (let project of projects) {
+    bindOpenProjectModals(project);
+  }
 
-  const lowerNav = document.getElementById('lower-nav');
+  addDropdownFunctionality(dropdownButton, $navDropdown, navDropdownUl);
+
   const $lowerNav = $('.lower-nav');
-  bindNavBar(lowerNav, $lowerNav);
+  window.scrollY > 550 && $lowerNav.show();
+  bindNavBar($lowerNav, $navDropdown);
 });
 
-function bindNavBar(lowerNav, $el) {
+function bindNavBar($el, navDropdown) {
   document.addEventListener('scroll', () => {
     if (window.scrollY > 550) {
-      $el.fadeIn();
+      $el.fadeIn(150);
     } else {
-      $el.fadeOut();
+      $el.fadeOut(150);
+      navDropdown.is(':visible') && navDropdown.fadeOut(150);
     }
   });
 }
 
-function addResumeModal(button) {
-  button.addEventListener('click', () => {
-    document.getElementById('resume-container').classList.remove('hidden');
-    document.getElementsByTagName('body')[0].classList.add('noscroll');
-  });
-  document.getElementById('resume-container').addEventListener('click', () => {
-    document.getElementById('resume-container').classList.add('hidden');
-    document.getElementsByTagName('body')[0].classList.remove('noscroll');
-  });
-}
-
-function addDropdownFunctionality(dropdownButton, navDropdown) {
-  // const dropdown = document.getElementsByClassName('nav-dropdown')[0];
+function addDropdownFunctionality(dropdownButton, $navDropdown, dropdownUl) {
   dropdownButton.addEventListener('click', (e) => {
-    navDropdown.classList.remove('hidden');
+    $navDropdown.show();
     e.stopPropagation();
-    document.getElementsByTagName('body')[0].addEventListener('click', () => {
-      navDropdown.classList.add('hidden');
+    document.addEventListener('click', (e) => {
+      $navDropdown.hide();
     });
   });
   // dropdownButton.addEventListener('mouseleave', () => {
   //   navDropdown.classList.add('hidden');
   // });
 
-  const dropdownLis = Array.from(navDropdown.children);
+  const dropdownLis = Array.from(dropdownUl.children);
   dropdownLis.forEach( li => {
     new CoolScroll(li);
-    li.addEventListener('click', () => navDropdown.classList.add('hidden'));
+    li.addEventListener('click', () => $navDropdown.hide());
   });
 }
 
 function bindCloseModalButton(button) {
   const $correspondent = $(document.getElementById(button.dataset.correspondent));
   button.addEventListener('click', () => {
-    $correspondent.fadeOut();
+    $correspondent.fadeOut(150);
     document.getElementsByTagName('body')[0].classList.remove('noscroll');
-
   });
 }
 
 function bindOpenProjectModals(project) {
   const $correspondent = $(document.getElementById(project.dataset.correspondent));
   project.addEventListener('click', () => {
-    $correspondent.fadeIn();
+    $correspondent.fadeIn(150);
     document.getElementsByTagName('body')[0].classList.add('noscroll');
-
   });
 }
 

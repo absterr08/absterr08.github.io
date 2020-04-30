@@ -19,25 +19,25 @@
       <header>
         <nav class='nav'>
           <ul class='left-nav'>
-            <li><a href="https://github.com/absterr08"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://github.com/absterr08"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="mailto:abbychersh@gmail.com"><i class="far fa-envelope"></i></a></li>
-            <li><a href="https://twitter.com/absterr08"><i class="fab fa-twitter"></i></i></a></li>
+            <li><a target="_blank" href="https://github.com/absterr08"><i class="fab fa-github"></i></a></li>
+            <li><a target="_blank" href="https://github.com/absterr08"><i class="fab fa-linkedin"></i></a></li>
+            <li><a target="_blank" href="mailto:abbychersh@gmail.com"><i class="far fa-envelope"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/absterr08"><i class="fab fa-twitter"></i></i></a></li>
           </ul>
           <ul class='right-nav'>
             <li class='button'>
+              <a target="_blank" href="img/abigail_hersh_resume.pdf">resume</a>
+            </li>
+            <li class='button'>
               <a href="#about" id='about-me-button'>about me</a>
             </li>
-            <li id='resume-button' class='button'>
-              resume
-            </li>
           </ul>
-          </nav>
+        </nav>
         <div class="overlay" id="top">
 
           <div class="lower-overlay">
               <h1>Abby Hersh</h1>
-              <h2 id='tricky-text'>Software Engineer</h2>
+              <h2 id='tricky-text'>Software Developer</h2>
               <div class="les-knope button">Parks and Rec Fan?</div>
           </div>
 
@@ -48,24 +48,27 @@
       <nav class='nav'>
         <h3 class='lower-nav'>Abby Hersh</h3>
         <ul class='lower-nav'>
-          <li id='nav-dropdown-button' class='button'>
-            navigate
-          </li>
-          <li id='resume-button-2' class='button'>
-            resume
-          </li>
           <li class='les-knope button'>
             parks and rec fan?
           </li>
+            <li class='button'>
+              <a target="_blank" href="img/abigail_hersh_resume.pdf">resume</a>
+            </li>
+          <li id='nav-dropdown-button' class='button'>
+            navigate
+          </li>
         </ul>
-        <ul class="nav-dropdown hidden" id="nav-dropdown" >
-          <li data-correspondent="top"><a>back to the top</a></li>
-          <li data-correspondent="about"><a>intro</a></li>
-          <li data-correspondent="skills"><a>stuff i know</a></li>
-          <li data-correspondent="cares"><a>stuff i care about</a></li>
-          <li data-correspondent="portfolio"><a>portfolio</a></li>
-          <li data-correspondent="thanks"><a>thanks :)</a></li>
-        </ul>
+        <div class="dropdown-container" id="nav-dropdown">
+          <div class="caret up"></div>
+          <ul class="nav-dropdown" id="nav-dropdown-ul">
+            <li data-correspondent="top"><a>back to the top</a></li>
+            <li data-correspondent="about"><a>intro</a></li>
+            <li data-correspondent="portfolio"><a>portfolio</a></li>
+            <li data-correspondent="cares"><a>stuff i care about</a></li>
+            <li data-correspondent="skills"><a>stuff i know</a></li>
+            <li data-correspondent="thanks"><a>thanks :)</a></li>
+          </ul>
+        </div>
       </nav>
 
 
@@ -76,90 +79,138 @@
             <img class='me-pic' src='./img/hands.jpg'/>
           </div>
           <h2>Hi!</h2>
-          Thanks for stopping by at my humble domain. My name's Abby and I'm a software developer.
-          I grew up in the San Fernando Valley, did my undergrad at UC Berkeley studying Cognitive Science, and then 4 months after I graduated, I moved to New York for App Academy.
-          I finished the program in January 2018 and worked as an instructor there for about 10 months.
-          Now, I'm a fullstack developer at Vigilant. 
-        </section>
-
-        <section id="skills">
-          <h2>Stuff I Know</h2>
-
-          At Vigilant, I work in Python and React/Redux. At App Academy, I taught Ruby, SQL, Rails, Javascript, React, and Redux. So I'm pretty good at those things, along with some other skills I've got under my belt:
-
-            <div class="skills-container">
-              <i class="devicon-ruby-plain-wordmark colored"></i>
-              <i class="devicon-rails-plain-wordmark colored"></i>
-              <i class="devicon-javascript-plain colored"></i>
-              <i class="devicon-jquery-plain-wordmark colored"></i>
-              <i class="devicon-git-plain-wordmark"></i>
-              <i class="devicon-react-original-wordmark colored"></i>
-              <img id="redux-icon" src="./img/redux.png" alt="">
-              <i class="devicon-html5-plain-wordmark"></i>
-              <i class="devicon-css3-plain-wordmark colored"></i>
-              <i class="devicon-heroku-original-wordmark colored"></i>
-              <img id="circle-icon" src="./img/circleci.png" alt="">
-              <i class="devicon-webpack-plain-wordmark colored"></i>
-              <i class="devicon-postgresql-plain-wordmark colored"></i>
-              <i class="devicon-python-plain-wordmark colored"></i>
-
-
-            </div>
+          Thanks for stopping by at my humble domain. My name's Abby and I'm a full-stack software developer.
+          I like eating food that's too spicy for me to handle, fostering dogs, 
+          playing volleyball-- oh right I should put technical stuff here, uhh, scalability!
         </section>
 
         <section id="portfolio">
           <h2>Projects</h2>
-          <div class="project-div" data-correspondent='slap'>
-            <figure id="one">
-              <figcaption id="img1" class="overlay"><h3>Slap</h3></figcaption><img src="./img/slap.png" alt=""></a>
-            </figure>
+          <div class='project-container'>
+            <div class="project-div" data-correspondent='word-trees'>
+              <figure id="one">
+                <figcaption id="img1" class="overlay">
+                  <h3>Word Trees</h3>
+                </figcaption><img src="./img/wordtrees.png" alt=""></a>
+              </figure>
+            </div>
+            <div class="project-div" data-correspondent='slap'>
+              <figure id="two">
+                <figcaption id="img1" class="overlay">
+                  <h3>Slap</h3>
+                </figcaption><img src="./img/slap.png" alt=""></a>
+              </figure>
+            </div>
           </div>
+
         </section>
 
         <section id="cares">
           <h2>Stuff I Care About</h2>
           I'm passionate about creating a comfortable environment in tech for people of all identities and making tech more accessibile to folks of all socioeconomic backgrounds.
-          I used to lead a Diversity and Inclusion roundtable discussion at App Academy.
-          These are optional lunch-time discussions where we talk about issues in tech such as diversity, bias, representation, and discrimination.
-          Currently I organize the WTGNC App Academy group, where I host meetings for folks identifying as women, trans, or gender non-conforming who are currently going through the program with those who have graduated so that we can connect over our experiences -- and delicious snacks.
-          I'm also a volunteer teacher with <a target="_blank" href="https://codenation.org/">Code Nation</a>, a wonderful organizaiton that brings web development classes to under-resourced high schools.
+          Every other month, I host a meetup for women, trans, and gender-nonconforming students and grads of the bootcamp I went to,
+          where someone gives a tech-related presentation and we connect over our experiences. I'm also a volunteer teacher with <a target="_blank" href="https://codenation.org/">Code Nation</a>, a wonderful organizaiton that brings web development classes to under-resourced high schools.
           They do some really great work and I definitely encourage you to check them out and get involved if it's something you're interested in!
           <br>
           <br>
           Aside from coding, I really enjoy playing soccer and volleyball. I'm also into hanging out and getting some work done at cafes with great oat milk cappucinos. (I'm easy to please so those
-          aren't hard to find!) After hours, catch me on the dance floor at any bar with good music and no cover charge 🕺🏼
+          aren't hard to find!) After hours, (and pre-pandemic) you could catch me on the dance floor at any bar with good music and no cover charge 🕺🏼
+        </section>
+
+        <section id="skills">
+          <h2>Stuff I Know</h2>
+          I've worked in Python, Django, Ruby, Rails, React, and Redux so I'm pretty good at those things, along with some other
+          skills I've got under my belt:
+        
+          <div class="skills-container">
+            <i class="devicon-python-plain-wordmark colored"></i>
+            <i class="devicon-django-plain"></i>
+            <i class="devicon-ruby-plain-wordmark colored"></i>
+            <i class="devicon-rails-plain-wordmark colored"></i>
+            <i class="devicon-git-plain-wordmark"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-react-original-wordmark colored"></i>
+            <img id="redux-icon" src="./img/redux.png" alt="">
+            <i class="devicon-html5-plain-wordmark"></i>
+            <i class="devicon-css3-plain-wordmark colored"></i>
+            <i class="devicon-heroku-original-wordmark colored"></i>
+            <i class="devicon-webpack-plain-wordmark colored"></i>
+            <i class="devicon-docker-plain-wordmark colored"></i>
+            <i class="devicon-go-plain"></i>
+            <i class="devicon-postgresql-plain-wordmark colored"></i>
+          </div>
         </section>
 
         <section id="thanks">
           <h2>Thanks</h2>
           Thanks for stopping by and taking the time to read all this! Feel free to reach out if you want to talk about code, my experiences at App Academy, issues regarding diversity and inclusion in tech,
-          how amazing NYC is, or anything at all really! I'm also happy to provide help and mentorship if you're looking for that. Just shoot me an email if you wanna talk!
+          how amazing NYC is, or anything at all really!
         </section>
       </div>
       <div id="contact">
         <h3>contact me :)</h3>
         <ul>
-          <li><a href="https://github.com/absterr08"><i class="fab fa-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/abigail-hersh/"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="mailto:abbychersh@gmail.com"><i class="far fa-envelope"></i></a></li>
-          <li><a href="https://twitter.com/absterr08"><i class="fab fa-twitter"></i></i></a></li>
+          <li><a target="_blank" href="https://github.com/absterr08"><i class="fab fa-github"></i></a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/abigail-hersh/"><i class="fab fa-linkedin"></i></a></li>
+          <li><a target="_blank" href="mailto:abbychersh@gmail.com"><i class="far fa-envelope"></i></a></li>
+          <li><a target="_blank" href="https://twitter.com/absterr08"><i class="fab fa-twitter"></i></i></a></li>
         </ul>
-        Copyright © Abby Hersh 2019
+        Copyright © Abby Hersh 2020
       </div>
 
+
+      <div id='word-trees' class="modal-background project-modal-background">
+        <div class="project-modal">
+          <h1>Word Trees</h1>
+          <div class="close-modal-button" data-correspondent='word-trees'>
+            <i class="far fa-window-close"></i>
+          </div>
+          <div class="project-buttons">
+            <div class="button">
+              <a target="_blank" href="http://word-trees.abbyhersh.com/">live site</a>
+            </div>
+            <div class="button">
+              <a target="_blank" href="https://github.com/absterr08/word-trees">code</a>
+            </div>
+          </div>
+          <div class="project-modal-content">
+            <img class="modal-img" src="./img/wordtrees.png" alt="">
+            <p>
+              This project visualizes the tree-like relationship formed by a word and its synonyms.
+              I built it out of interest in exploring relationships between similar words.
+              A tree of synonyms is built out from the root word in a breadth-first manner. The tree is then searched for the target word if
+              one is provided.
+              <br><br>
+              Take "fun" and "gaiety" for example. A path from "fun" to "gaiety" exists because "merriment" is a synonym of "fun", and
+              "gaiety" is a synonym of "merriment".
+              <br><br>
+              The synonym data from this project comes from <a target="_blank" href="https://wordnet.princeton.edu/">Wordnet</a>, a
+              large lexical database of English words that
+              groups nouns, verbs, adjectives, and adverbs into sets of synonyms.
+              <a target="_blank" href="https://www.nltk.org/api/nltk.corpus.reader.html#module-nltk.corpus.reader.wordnet">This corpus
+                for Wordnet</a>
+              is used to harness the data. It's provided by <a target="_blank" href="https://www.nltk.org/">NLTK (Natural Language
+                Toolkit)</a>,
+              a really cool, extensive Python toolkit for working with language data.
+              On the frontend, <a target="_blank" href="https://d3js.org/">d3</a> is used to render the tree.
+            </p>
+          </div>
+
+        </div>
+      </div>
 
       <div id='slap' class="modal-background project-modal-background">
         <div class="project-modal">
           <h1>Slap</h1>
-          <div class="button close-modal-button" data-correspondent='slap'>
-            back
+          <div class="close-modal-button" data-correspondent='slap'>
+            <i class="far fa-window-close"></i>
           </div>
           <div class="project-buttons">
             <div class="button">
-              <a href="https://aa-slap.herokuapp.com/#/">live site</a>
+              <a target="_blank" href="https://aa-slap.herokuapp.com/#/">live site</a>
             </div>
             <div class="button">
-              <a href="https://github.com/absterr08/slap">code</a>
+              <a target="_blank" href="https://github.com/absterr08/slap">code</a>
             </div>
           </div>
           <div class="project-modal-content">
@@ -174,10 +225,6 @@
           </div>
 
         </div>
-      </div>
-
-      <div id="resume-container" class="modal-background hidden">
-        <embed id="resume" type="application/pdf" src="./img/abigail_hersh_resume.pdf#zoom=100">
       </div>
 
       <div id="compliment-modal-background" class="modal-background">
