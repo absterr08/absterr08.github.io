@@ -204,7 +204,8 @@ ul {
 
 .main-content > section {
   min-height: 100vh;
-	font-size: 20px;
+  font-size: 20px;
+  width: 90%;
 }
 
 .main-content > section:last-of-type {
@@ -258,6 +259,8 @@ ul {
 
 .project-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 img {
@@ -330,7 +333,8 @@ img {
 }
 
 .project-modal-content > p {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   padding: 20px;
   text-align: center;
 }
@@ -436,3 +440,21 @@ h3.lower-nav {
       right: 12px;
   }
   
+
+  @media screen and (max-width: 600px) {
+    .close-modal-button {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      font-size: 10px;
+    }
+
+    .project-modal-content {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .project-modal-content > p {
+      width: 100%;
+    }
+  }
