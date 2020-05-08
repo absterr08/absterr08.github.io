@@ -206,6 +206,7 @@ ul {
   min-height: 100vh;
   font-size: 20px;
   width: 90%;
+  padding-top: 50px;
 }
 
 .main-content > section:last-of-type {
@@ -456,5 +457,22 @@ h3.lower-nav {
 
     .project-modal-content > p {
       width: 100%;
+    }
+
+    .skills-container i {
+      zoom: 3;
+      padding: 5px;
+    }
+
+    #redux-icon {
+      width: 10px;
+      height: 8px;
+      padding: 0px;
+      padding-top: 1.5px;
+    }
+
+    .lower-nav .button {
+      font-size: 10px;
+      height: 15px;
     }
   }
