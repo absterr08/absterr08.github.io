@@ -2,12 +2,12 @@ import { bindComplimentStuff } from './les_knope/compliments.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const tricky = document.getElementById('tricky-text');
-  tricky.addEventListener('mouseover', () => {
-    tricky.innerText = "(not a photographer but i took this photo!)";
-  });
-  tricky.addEventListener('mouseleave', () => {
-    tricky.innerText = "Software Developer";
-  });
+  // tricky.addEventListener('mouseover', () => {
+  //   tricky.innerText = "(not a photographer but i took this photo!)";
+  // });
+  // tricky.addEventListener('mouseleave', () => {
+  //   tricky.innerText = "Software Developer";
+  // });
 
   bindComplimentStuff();
 });
